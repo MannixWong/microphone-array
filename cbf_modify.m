@@ -119,8 +119,8 @@ end
 %CBF_UCA_验证
 Pmax=zeros(1,3);
 R=X*X';                   % M*M协方差矩阵
-for azi=1:1:180%azimuth为0-180
-    for ele=1:1:90%elevation为0-90
+for azi=1:2:180%azimuth为0-180
+    for ele=1:2:90%elevation为0-90
         for m=1:M
             AQ1(m,1)=exp(-1i*2*pi*dw*cos(azi*pi/180-2*pi*(m-1)/M)*sin(ele*pi/180));%8行1,对CBF来说加权向量与导向向量相同，圆阵
             %AQ1(m,1)=exp(-1i*2*pi*f1*l*sin(ele)*(cos(azi)-cos((m*2*pi/M)-azi))/c);

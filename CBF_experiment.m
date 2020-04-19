@@ -1,9 +1,8 @@
 clear;close all;clc
 %N=600;%快拍数
 M=16;%阵元数
-%N=600;
 alpha=360/M;%阵元夹角
-c=340%光速
+c=340;%光速
 f=2000;
 r=0.15;%圆阵半径
 tic
@@ -80,7 +79,8 @@ for azi=1:1:180
 %         SP=SP/max(SP);
 %         SP=20*log10(abs(SP));
         % disp(Power);
-        P(ele,azi)=abs(Power);   %90*180
+P(ele,azi)=abs(Power);
+%         P(ele,azi)=-10*log10(abs(Power));   %90*180
         if Pmax(1)<Power
             Pmax(1)=Power;
             Pmax(2)=azi;
@@ -101,7 +101,8 @@ figure('Name','CBF_noise','Numbertitle','off')
 
 
 % contourf(P);
-plot3(P)
+mesh(P)
+
 
 colorbar %添加色标
 colormap('jet');
