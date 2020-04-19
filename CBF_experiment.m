@@ -7,6 +7,7 @@ c=340%光速
 f=2000;
 r=0.15;%圆阵半径
 tic
+%for git test
 %%
 x1  = xlsread('C:\Users\MannixWong\Desktop\信号的样本\m1.xlsx','B20002:B20602');
 x2  = xlsread('C:\Users\MannixWong\Desktop\信号的样本\m2.xlsx','B20002:B20602');
